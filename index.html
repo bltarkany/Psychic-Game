@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cookie Monster Eats</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
@@ -17,8 +26,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12">
-                    <img src="assets/images/cookie-monster_0.jpg" id="banner" width="940px" , height="350px">
+                <div class="col-sm-12 col-md-12">
+                    <img id="banner" src="assets/images/cookie-monster_0.jpg" width="920px" , height="350px">
                 </div>
             </div>
         </div>
@@ -29,14 +38,14 @@
                     <br>
                     <p>Guess what kind of cookie Cookie Monster wants to eat before he gets hangry! You will have 3
                         guesses. Press the corresponding letter to the cookie you want to give him. Guess correctly and
-                        he munches! Guess incorrectly and prepare fo the hangry!</p>
+                        he munches! Guess incorrectly and prepare fo the hangry! Choose a cookie to begin!</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
                     <ul id="cookies">
-                        <li>Chocolate Chip = o</li>
-                        <li>Oatmeal = 0</li>
+                        <li>Chocolate Chip = c</li>
+                        <li>Oatmeal = o</li>
                         <li>Snickerdoodle = s</li>
                         <li>Monster Cookie = m</li>
                         <li>Peanut Butter = p</li>
@@ -47,13 +56,18 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <div id="cookieImage"></div>
+                <div class="col-sm-12 col-md-6 choiceCol">
+                    <div><img id="cookieImage" src="assets/images/questionmark.jpg" width="200px" height="200px"></div>
                     <h3 id="cookieChoice"></h3>
                 </div>
-                <div class="col-sm-12 col-md-6">
-                    <div id="monsterImage"></div>
+                <div class="col-sm-12 col-md-6 choiceCol">
+                    <div><img id="monsterImage" src="assets/images/chef-cookie.jpeg" width="200px" height="200px"></div>
                     <h3 id="monsterReaction"></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 id="outcome"></h3>
                 </div>
             </div>
             <div class="row">
@@ -70,7 +84,7 @@
             </div>
         </div>
     </div>
-
+    <script src="assets/javascript/game.js"></script>
 </body>
 
 </html>
