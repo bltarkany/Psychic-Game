@@ -34,6 +34,8 @@ function startGame() {
     guessesLeft = 3;
     userGuessed = [];
 
+
+
     winScore.textContent = "Wins: " + winCount;
     lossScore.textContent = "Loses: " + lossCount;
     guessesRemain.textContent = "Guesses Left: " + guessesLeft;
@@ -74,6 +76,7 @@ document.onkeyup = function (event) {
 
         if (userChoice === monsterChoice) {
             winCount++;
+            monsterPic.setAttribute("src", "assets/images/cookie-suit.jpeg");
             cookieChoosen.textContent = "You choose " + userChoice;
             monsterAnswer.textContent = "You found my Cookie!";
             gameStatement.textContent = "You've won! Cookie Monster is Satisfied!";
@@ -94,6 +97,7 @@ document.onkeyup = function (event) {
             lossCount++;
             // guessesLeft = 3;
             // userGuessed = [];
+            monsterPic.setAttribute("src", "assets/images/angrycookie.jpg");
 
             gameStatement.textContent = "Uh-oh! You've Lost. Cookie Monster is Officially Hangry!!";
             

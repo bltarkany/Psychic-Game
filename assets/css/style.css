@@ -3,10 +3,11 @@ body {
 }
 
 .content {
-    background-color: white;
+    background-color: #f0f2ff;
     border: 6px solid black;
     border-radius: 4px;
     font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 18px;
     width: 960px;
     margin: 0 auto 0 auto;
     text-align: center;
