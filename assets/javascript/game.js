@@ -49,7 +49,11 @@ function restart() {
     guessesLeft = 3;
     userGuessed = [];
 
+    cookiePic.setAttribute("src", "assets/images/questionmark.jpg");
+    cookieChoosen.textContent = "";
     monsterPic.setAttribute("src", "assets/images/chef-cookie.jpeg");
+    monsterAnswer.textContent = "";
+    gameStatement.textContent = "";
 
     winScore.textContent = "Wins: " + winCount;
     lossScore.textContent = "Loses: " + lossCount;
@@ -60,9 +64,9 @@ function restart() {
 // creates monsters choice
 function monsterAction() {
 
- monsterChoice = cookieoptions[Math.floor(Math.random() * cookieoptions.length)];
+    monsterChoice = cookieoptions[Math.floor(Math.random() * cookieoptions.length)];
 
-console.log(monsterChoice);
+    console.log(monsterChoice);
 }
 
 
@@ -76,19 +80,46 @@ document.onkeyup = function (event) {
     // state which user choices to look for 
     if ((userChoice === "c") || (userChoice === "o") || (userChoice === "s") || (userChoice === "m") || (userChoice === "p") || (userChoice === "g") || (userChoice === "f") || (userChoice === "w")) {
 
+        if (userChoice === "c") {
+            cookieChoosen.textContent = "You chose chocolate chip";
+            cookiePic.setAttribute("src", "assets/images/chocolatechip.jpeg");
+        } else if (userChoice === "o") {
+            cookieChoosen.textContent = "You chose oatmeal";
+            cookiePic.setAttribute("src", "assets/images/oatmeal.jpeg");
+        } else if (userChoice === "g") {
+            cookieChoosen.textContent = "You chose gingerbread";
+            cookiePic.setAttribute("src", "assets/images/gingerbread.jpeg");
+        } else if (userChoice === "s") {
+            cookieChoosen.textContent = "You chose snickerdoodle";
+            cookiePic.setAttribute("src", "assets/images/snickerdoodle.jpeg");
+        } else if (userChoice === "p") {
+            cookieChoosen.textContent = "You chose peanut butter";
+            cookiePic.setAttribute("src", "assets/images/pb.jpeg");
+        } else if (userChoice === "f") {
+            cookieChoosen.textContent = "You chose fortune cookie";
+            cookiePic.setAttribute("src", "assets/images/fortune.jpeg");
+        } else if (userChoice === "m") {
+            cookieChoosen.textContent = "You chose monster cookie";
+            cookiePic.setAttribute("src", "assets/images/monstercookie.jpeg");
+        } else if (userChoice === "w") {
+            cookieChoosen.textContent = "You chose white chocolate chip";
+            cookiePic.setAttribute("src", "assets/images/whitechocolate.jpeg");
+        }
+
+
         if (userChoice === monsterChoice) {
             winCount++;
             monsterPic.setAttribute("src", "assets/images/cookie-suit.jpeg");
-            cookieChoosen.textContent = "You choose " + userChoice;
+            // cookieChoosen.textContent = "You choose " + userChoice;
             monsterAnswer.textContent = "You found my Cookie!";
-            gameStatement.textContent = "You've won! Cookie Monster is Satisfied!";
+            gameStatement.textContent = "You've won! Cookie Monster is Satisfied! Choose Monster's next cookie.";
             console.log(winCount);
             startGame();
             monsterAction();
         } else {
             guessesLeft--;
             userGuessed.push(userChoice);
-            cookieChoosen.textContent = "You choose " + userChoice;
+            // cookieChoosen.textContent = "You choose " + userChoice;
             monsterAnswer.textContent = "That's not the cookie!";
             monsterPic.setAttribute("src", "assets/images/super-sad.jpeg");
             gameStatement.textContent = "Wrong cookie. Try again.";
@@ -101,8 +132,8 @@ document.onkeyup = function (event) {
             // userGuessed = [];
             monsterPic.setAttribute("src", "assets/images/angrycookie.jpg");
 
-            gameStatement.textContent = "Uh-oh! You've Lost. Cookie Monster is Officially Hangry!!";
-            
+            gameStatement.textContent = "Uh-oh! You've Lost. Cookie Monster is Officially Hangry!! Try again.";
+
             startGame();
             monsterAction();
         }
