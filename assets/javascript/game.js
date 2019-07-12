@@ -49,6 +49,8 @@ function restart() {
     guessesLeft = 3;
     userGuessed = [];
 
+    monsterPic.setAttribute("src", "assets/images/chef-cookie.jpeg");
+
     winScore.textContent = "Wins: " + winCount;
     lossScore.textContent = "Loses: " + lossCount;
     guessesRemain.textContent = "Guesses Left: " + guessesLeft;
@@ -106,7 +108,7 @@ document.onkeyup = function (event) {
         }
 
         if (lossCount === 10) {
-            alert("You have lost 10 times. Cookie Monster says No More! Would you like to play again?")
+            alert("You have lost 10 times. Cookie Monster says No More! Would you like to play again?");
             restart();
         }
     }
