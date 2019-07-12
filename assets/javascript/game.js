@@ -37,7 +37,7 @@ function startGame() {
 
 
     winScore.textContent = "Wins: " + winCount;
-    lossScore.textContent = "Loses: " + lossCount;
+    lossScore.textContent = "Losses: " + lossCount;
     guessesRemain.textContent = "Guesses Left: " + guessesLeft;
     lettersGuessed.textContent = "Cookies Already Guessed: " + userGuessed;
 }
@@ -56,7 +56,7 @@ function restart() {
     gameStatement.textContent = "";
 
     winScore.textContent = "Wins: " + winCount;
-    lossScore.textContent = "Loses: " + lossCount;
+    lossScore.textContent = "Losses: " + lossCount;
     guessesRemain.textContent = "Guesses Left: " + guessesLeft;
     lettersGuessed.textContent = "Cookies Already Guessed: " + userGuessed;
 }
@@ -139,14 +139,14 @@ document.onkeyup = function (event) {
         }
 
         if (lossCount === 10) {
-            alert("You have lost 10 times. Cookie Monster says No More! Would you like to play again?");
+            alert("You have lost 10 times. Cookie Monster says 'No More'! Would you like to play again?");
             restart();
         }
     }
 
 
     winScore.textContent = "Wins: " + winCount;
-    lossScore.textContent = "Loses: " + lossCount;
+    lossScore.textContent = "Losses: " + lossCount;
     guessesRemain.textContent = "Guesses Left: " + guessesLeft;
     lettersGuessed.textContent = "Cookies Already Guessed: " + userGuessed;
 
