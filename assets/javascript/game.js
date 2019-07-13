@@ -34,8 +34,6 @@ function startGame() {
     guessesLeft = 3;
     userGuessed = [];
 
-
-
     winScore.textContent = "Wins: " + winCount;
     lossScore.textContent = "Losses: " + lossCount;
     guessesRemain.textContent = "Guesses Left: " + guessesLeft;
@@ -80,6 +78,7 @@ document.onkeyup = function (event) {
     // state which user choices to look for 
     if ((userChoice === "c") || (userChoice === "o") || (userChoice === "s") || (userChoice === "m") || (userChoice === "p") || (userChoice === "g") || (userChoice === "f") || (userChoice === "w")) {
 
+        // change statement and pic with each choice
         if (userChoice === "c") {
             cookieChoosen.textContent = "You chose chocolate chip";
             cookiePic.setAttribute("src", "assets/images/chocolatechip.jpeg");
@@ -110,7 +109,6 @@ document.onkeyup = function (event) {
         if (userChoice === monsterChoice) {
             winCount++;
             monsterPic.setAttribute("src", "assets/images/cookie-suit.jpeg");
-            // cookieChoosen.textContent = "You choose " + userChoice;
             monsterAnswer.textContent = "You found my Cookie!";
             gameStatement.textContent = "You've won! Cookie Monster is Satisfied! Choose Monster's next cookie.";
             console.log(winCount);
@@ -119,7 +117,6 @@ document.onkeyup = function (event) {
         } else {
             guessesLeft--;
             userGuessed.push(userChoice);
-            // cookieChoosen.textContent = "You choose " + userChoice;
             monsterAnswer.textContent = "That's not the cookie!";
             monsterPic.setAttribute("src", "assets/images/super-sad.jpeg");
             gameStatement.textContent = "Wrong cookie. Try again.";
@@ -128,10 +125,7 @@ document.onkeyup = function (event) {
 
         if (guessesLeft === 0) {
             lossCount++;
-            // guessesLeft = 3;
-            // userGuessed = [];
             monsterPic.setAttribute("src", "assets/images/angrycookie.jpg");
-
             gameStatement.textContent = "Uh-oh! You've Lost. Cookie Monster is Officially Hangry!! Try again.";
 
             startGame();
