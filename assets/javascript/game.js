@@ -20,7 +20,7 @@ var gameStatement = document.getElementById("outcome");
 // game counters
 var winCount = 0;
 var lossCount = 0;
-var guessesLeft = 3;
+var guessesLeft = 4;
 var userGuessed = [];
 var monsterChoice = "";
 
@@ -31,7 +31,7 @@ var monsterChoice = "";
 // start new game round
 function startGame() {
 
-    guessesLeft = 3;
+    guessesLeft = 4;
     userGuessed = [];
 
     winScore.textContent = "Wins: " + winCount;
@@ -44,7 +44,7 @@ function startGame() {
 function restart() {
     winCount = 0;
     lossCount = 0;
-    guessesLeft = 3;
+    guessesLeft = 4;
     userGuessed = [];
 
     cookiePic.setAttribute("src", "assets/images/questionmark.jpg");
