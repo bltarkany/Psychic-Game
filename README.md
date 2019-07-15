@@ -1,17 +1,33 @@
+# This project was used to solidify Javascript components
+  1. documenting to the html.
+  2. global variables
+  3. global functions
+  4. onkeyup functions
+  5. setting attributes
+  
+# GitHub Repo
+allowed for continually progression and use of github. Storing multiple updates to watch the progression of the project.
+
+
 # Psychic-Game
 Before You Begin
 
 
-Create a new GitHub repo called Word Guess Game or Psychic-Game, in accordance with the assignment you choose to complete. Then, clone it to your computer.
+Create a new GitHub repo called Word Guess Game or Psychic-Game, in accordance with the assignment you choose to complete. 
+Then, clone it to your computer.
+
 Inside your local git repository, create an index.html.
+
 While still in your local git repo, create a directory called assets.
 cd your way into the assets folder, then make three additional folders: javascript, css and images.
 
 
 
 In the javascript folder, make a file called game.js. Use the src attribute of the script tag to link to this file, rather than embedding the code directly in your HTML document.
+
 In the css folder, make a file called style.css.
 Also in the css folder, make a file called reset.css. Paste into it the code from the Meyerweb reset stylesheet. If you opt to use Bootstrap instead of writing your own CSS, skip this step, and simply include a link to Bootstrap via CDN.
+
 In the images folder, save whatever images you plan on using.
 
 
@@ -24,7 +40,9 @@ In the images folder, save whatever images you plan on using.
 └── index.html
 
 Push the above changes to GitHub.
+
 Choose whichever game you'd like to build. Making the Psychic game will prove less challenging than coding Word Guess. However, as the challenge of the Word Guess exercise provides a more comprehensive review of this unit's material, we suggest attempting that assignment first.
+
 Note: There's no shame if you'd prefer submitting Psychic—it's still a proper challenge.
 Push your selected game to Github Pages.
 
@@ -33,10 +51,8 @@ Push your selected game to Github Pages.
 Option One: Psychic Game (Basic)
 
 
+Essentially, the app randomly picks a letter, and the user has to guess which letter the app chose. Put the following text on your page:
 
-
-Watch the demo.
-You're going to make a game just like the one in the video. Essentially, the app randomly picks a letter, and the user has to guess which letter the app chose. Put the following text on your page:
 Guess what letter I'm thinking of
 Wins: (# of times the user has guessed the letter correctly)
 Losses: (# of times the user has failed to guess the letter correctly after exhausting all guesses)
