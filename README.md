@@ -1,5 +1,13 @@
 # Psychic-Game
 
+### This project was used to solidify Javascript components
+  1. documenting to the html.
+  2. global variables
+  3. global functions
+  4. onkeyup functions
+  5. setting attributes
+
+
 ### Overview
 
 * Utilizing javascript to modify the DOM
