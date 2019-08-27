@@ -79,30 +79,66 @@ document.onkeyup = function (event) {
     if ((userChoice === "c") || (userChoice === "o") || (userChoice === "s") || (userChoice === "m") || (userChoice === "p") || (userChoice === "g") || (userChoice === "f") || (userChoice === "w")) {
 
         // change statement and pic with each choice
-        if (userChoice === "c") {
-            cookieChoosen.textContent = "You chose chocolate chip";
-            cookiePic.setAttribute("src", "assets/images/chocolatechip.jpeg");
-        } else if (userChoice === "o") {
-            cookieChoosen.textContent = "You chose oatmeal";
-            cookiePic.setAttribute("src", "assets/images/oatmeal.jpeg");
-        } else if (userChoice === "g") {
-            cookieChoosen.textContent = "You chose gingerbread";
-            cookiePic.setAttribute("src", "assets/images/gingerbread.jpeg");
-        } else if (userChoice === "s") {
-            cookieChoosen.textContent = "You chose snickerdoodle";
-            cookiePic.setAttribute("src", "assets/images/snickerdoodle.jpeg");
-        } else if (userChoice === "p") {
-            cookieChoosen.textContent = "You chose peanut butter";
-            cookiePic.setAttribute("src", "assets/images/pb.jpeg");
-        } else if (userChoice === "f") {
-            cookieChoosen.textContent = "You chose fortune cookie";
-            cookiePic.setAttribute("src", "assets/images/fortune.jpeg");
-        } else if (userChoice === "m") {
-            cookieChoosen.textContent = "You chose monster cookie";
-            cookiePic.setAttribute("src", "assets/images/monstercookie.jpeg");
-        } else if (userChoice === "w") {
-            cookieChoosen.textContent = "You chose white chocolate chip";
-            cookiePic.setAttribute("src", "assets/images/whitechocolate.jpeg");
+        // if (userChoice === "c") {
+        //     cookieChoosen.textContent = "You chose chocolate chip";
+        //     cookiePic.setAttribute("src", "assets/images/chocolatechip.jpeg");
+        // } else if (userChoice === "o") {
+        //     cookieChoosen.textContent = "You chose oatmeal";
+        //     cookiePic.setAttribute("src", "assets/images/oatmeal.jpeg");
+        // } else if (userChoice === "g") {
+        //     cookieChoosen.textContent = "You chose gingerbread";
+        //     cookiePic.setAttribute("src", "assets/images/gingerbread.jpeg");
+        // } else if (userChoice === "s") {
+        //     cookieChoosen.textContent = "You chose snickerdoodle";
+        //     cookiePic.setAttribute("src", "assets/images/snickerdoodle.jpeg");
+        // } else if (userChoice === "p") {
+        //     cookieChoosen.textContent = "You chose peanut butter";
+        //     cookiePic.setAttribute("src", "assets/images/pb.jpeg");
+        // } else if (userChoice === "f") {
+        //     cookieChoosen.textContent = "You chose fortune cookie";
+        //     cookiePic.setAttribute("src", "assets/images/fortune.jpeg");
+        // } else if (userChoice === "m") {
+        //     cookieChoosen.textContent = "You chose monster cookie";
+        //     cookiePic.setAttribute("src", "assets/images/monstercookie.jpeg");
+        // } else if (userChoice === "w") {
+        //     cookieChoosen.textContent = "You chose white chocolate chip";
+        //     cookiePic.setAttribute("src", "assets/images/whitechocolate.jpeg");
+        // }
+
+        // switch to remove the extensive if/else statements
+        switch (userChoice) {
+            case "c":
+                cookieChoosen.textContent = "You chose chocolate chip";
+                cookiePic.setAttribute("src", "assets/images/chocolatechip.jpeg");
+                break;
+            case "o":
+                cookieChoosen.textContent = "You chose oatmeal";
+                cookiePic.setAttribute("src", "assets/images/oatmeal.jpeg");
+                break;
+            case "g":
+                cookieChoosen.textContent = "You chose gingerbread";
+                cookiePic.setAttribute("src", "assets/images/gingerbread.jpeg");
+                break;
+            case "s":
+                cookieChoosen.textContent = "You chose snickerdoodle";
+                cookiePic.setAttribute("src", "assets/images/snickerdoodle.jpeg");
+                break;
+            case "p":
+                cookieChoosen.textContent = "You chose peanut butter";
+                cookiePic.setAttribute("src", "assets/images/pb.jpeg");
+                break;
+            case "f":
+                cookieChoosen.textContent = "You chose fortune cookie";
+                cookiePic.setAttribute("src", "assets/images/fortune.jpeg");
+                break;
+            case "m":
+                cookieChoosen.textContent = "You chose monster cookie";
+                cookiePic.setAttribute("src", "assets/images/monstercookie.jpeg");
+                break;
+            case "w":
+                cookieChoosen.textContent = "You chose white chocolate chip";
+                cookiePic.setAttribute("src", "assets/images/whitechocolate.jpeg");
+                break;
         }
 
 
